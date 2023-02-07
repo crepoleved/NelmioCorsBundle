@@ -3,11 +3,11 @@ name: ci
 
 steps:
 - name: install
-  image: composer
+  image: jakzal/phpqa
   commands:
   - composer install
 
 - name: test
-  image: php:7
+  image: jakzal/phpqa
   commands:
   - vendor/bin/simple-phpunit --configuration phpunit.xml.dist --coverage-text
